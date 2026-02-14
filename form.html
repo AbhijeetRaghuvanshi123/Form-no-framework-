@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background: #0b0b0b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* MAIN WRAPPER */
+    .wrapper {
+        width: 1200px;
+        aspect-ratio: 3 / 2;
+        display: flex;
+        background: #111;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 0 40px rgba(255, 80, 0, 0.3);
+    }
+
+    /* LEFT SIDE - Lava Image */
+    .sidebar {
+        width: 40%;
+        background: url('sidebar.jpg') center/cover no-repeat;
+        position: relative;
+    }
+
+    /* Dark overlay for readability */
+    .sidebar::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+    }
+
+    .logo-title {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.492);
+    }
+
+    .logo-title h1 {
+        color: #ff5a1f;
+        letter-spacing: 6px;
+        font-size: 42px;
+        text-shadow: 0 0 15px rgba(255, 80, 0, 0.8);
+    }
+
+    /* RIGHT SIDE */
+    .content {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #ddd;
+        background: #111;
+    }
+
+    .header-text {
+        padding: 40px 60px 50px 60px;
+        font-size: 18px;
+        color: #aaa;
+    }
+
+    .header-text strong {
+        color: #ff5a1f;
+    }
+
+    /* FORM CARD */
+    .form-card {
+        background: #1a1a1a;
+        padding: 40px 60px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.4), 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .form-card h2 {
+        margin-bottom: 25px;
+        color: #ff5a1f;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 40px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 12px;
+        margin-bottom: 6px;
+        color: #bbb;
+        letter-spacing: 1px;
+    }
+
+    input {
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 6px;
+        background: #0f0f0f;
+        color: white;
+        transition: 0.3s ease;
+    }
+
+    /* Glow effect on focus */
+    input:focus {
+        border-color: #ff5a1f;
+        box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
+        outline: none;
+    }
+
+    /* SUBMIT SECTION */
+    .submit-section {
+        padding: 30px 60px;
+    }
+
+    /* Lava button */
+    button {
+        background: linear-gradient(45deg, #ff3c00, #ff7a00);
+        color: white;
+        padding: 14px 45px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+        box-shadow: 0 0 15px rgba(255, 80, 0, 0.6);
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 25px rgba(255, 80, 0, 0.9);
+    }
+
+    /* Login link */
+    .login-link {
+        margin-top: 20px;
+        color: #aaa;
+    }
+
+    .login-link a {
+        color: #ff5a1f;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .login-link a:hover {
+        text-shadow: 0 0 8px rgba(255, 80, 0, 0.8);
+    }
+
+    img{
+        height: 120px;
+    }
+
+</style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="sidebar">
+            <div class="logo-title">
+                <img src="image.svg" alt="logo">
+                <h1>WIDOWMAKER</h1>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="header-text">
+                <p>
+                    This is not a real online service! You know you need something 
+                    like this in your life to help you realize your deepest dreams.
+                    <strong>Sign up now to get started.</strong>
+                </p>
+                <br>
+                <p><strong>You know you want to.</strong></p>
+            </div>
+
+            <form>
+                <div class="form-card">
+                    <h2>Let’s do this!</h2>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>FIRST NAME</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label>LAST NAME</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label>EMAIL</label>
+                            <input type="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label>PHONE NUMBER</label>
+                            <input type="tel">
+                        </div>
+
+                        <div class="form-group">
+                            <label>PASSWORD</label>
+                            <input type="password">
+                        </div>
+
+                        <div class="form-group">
+                            <label>CONFIRM PASSWORD</label>
+                            <input type="password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submit-section">
+                    <button type="submit">Create Account</button>
+                    <div class="login-link">
+                        Already have an account? <a href="#">Log in</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
